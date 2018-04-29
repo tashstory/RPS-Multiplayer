@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors Online</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+  </head>
+  <body>
+
+    <h1>Rock Paper Scissors Multiplayer!</h1>
+
+    <div class="player">
+    <button class="col-md-6 a height-fix btn-primary"  type="submit" val="player1">Player1</button>
+    <button class="col-md-6 a height-fix btn-primary"  type="submit" val="player2">Player2</button>
+    </div>
+    <form id="usernameForm" hidden>
+      <input type="text" id="input-name" placeholder="Enter Username" required>
+      <button type="submit" id="addUsername">Begin!</button>
+    </form>
+      
+    
+    <div id="choiceForm" class = "container" hidden  >
+            <button class="btn btn-primary choice" type="submit" value = "Rock">Rock</button>
+            <button class="btn btn-primary choice" type="submit" value = "Paper">Paper</button>
+            <button class="btn btn-primary choice" type="submit" value = "Scissors">Scissors</button>
+
+    </div>
+
+
+<div class ="container">
+
+    <div class="row">
+        <div class="col-md-6" id="#player_1_field" style="background-color: gray;">
+          <h2 id="username1">Waiting for Player 1...</h2>
+          <div>Choice: <div id="player1choice"></div></div>
+          <div>Wins: <div id="player1wins"></div></div>
+          <div>Losses <div id="player1losses"></div></div>
+        </div>
+        <div class="col-md-6" id="#player_2_field" style="background-color: red;">
+            <h2 id="username2">Waiting for Player 2...</h2>
+            <div>Choice: <div id="player2choice"></div></div>
+          <div>Wins: <div id="player2wins"></div></div>
+          <div>Losses <div id="player2losses"></div></div>
+        </div>   
+    </div>    
+</div> 
+
+<div id = "hiddeninput" val ="0" hidden></div>  
+
+
+    <script src="script/game.js" charset="utf-8"></script>
+  </body>
+</html>
+
+
+<style media="screen">
+  input::placeholder{
+    color: red;
+  }
+
+  form{
+      margin-left: 635px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+  }
+  h1{
+      
+      text-align:center;
+  }
+  .container{
+      margin-top: 50px;
+      border: 3px solid red;
+      
+  }
+  .row{
+      height: 30px;
+  }
+  .col-md-6{
+      height: 394px;
+      text-align: center;
+  }
+  .btn{
+      
+      position: relative;
+      float: left;
+      
+  } 
+  #choiceForm{
+      
+      text-align: center;
+      margin-left: 635px; 
+      width: 30%;
+      height: 7%;
+      border: none;
+      margin-bottom: 10px;
+  }
+  .player{
+      clear:both;  
+      margin-left: 460px;
+      
+  }
+  .height-fix{
+    height: 5%;
+    width: 15%;
+    margin-left: 100px;
+  }
+  body{
+      
+  }
+  #player_1_field{
+
+  }
+  #player_2_field{
+
+  }
+  #player_1_Username{
+      
+  }
+</style>
