@@ -215,8 +215,8 @@ $(document).ready(function () {
       player2losses = player2losses + 1;
     }
     else if((player1weapon === "Paper") && (player2weapon === "Scissors")){
-      player2wins = player2wins + 5
-      player1losses= player1losses + 5;
+      player2wins = player2wins + 1
+      player1losses= player1losses + 1;
     }
     else if((player1weapon === "Scissors") && (player2weapon === "Paper")){
       player1wins = player1wins + 1;
